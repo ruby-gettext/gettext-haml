@@ -74,8 +74,8 @@ module GetTextHaml
     end
 
     private
-    def detect_encoding(erb_source)
-      if /\A#coding:(.*)\n/ =~ erb_source
+    def detect_encoding(source)
+      if /\A#coding:(.*)\n/ =~ source
         $1
       else
         nil
